@@ -1,1 +1,5 @@
 <app-header [titulo]="titulo"> </app-header>
+
+<ion-content>
+  <app-carrusel [dataImagen]="imagenesCarrusel" (imagenSelect)="detallePelicula($event)"></app-carrusel>
+</ion-content>
