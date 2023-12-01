@@ -1,0 +1,13 @@
+<div class="background">
+  <div class="gallery">
+    <div *ngFor="let imagen of dataImagen; index as i " class="card">
+      <figure>
+        <img
+          [src]="imagen.url"
+          [alt]="imagen.detalleImage"
+          (click)="selectImagen(i)"
+        />
+      </figure>
+    </div>
+  </div>
+</div>
