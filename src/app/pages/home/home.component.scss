@@ -1,0 +1,33 @@
+.bodyy {
+  background-color: white;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-rows: 1fr 2fr; /* Dos filas de altura automática */
+  // grid-gap: 10px; /* Espacio entre las celdas */
+}
+
+/* Estilos para los elementos */
+.elemento3 {
+  padding: 20px;
+  background-color: white;;
+  color: white;
+  text-align: center;
+    height: 100vh;
+}
+
+/* Elementos específicos ocupando filas específicas */
+.elemento1 {
+  grid-row: 1; /* Comienza en la fila 1 y termina en la fila 2 */
+}
+
+.elemento3 {
+  grid-row: 2; /* Comienza en la fila 2 y termina en la fila 3 */
+}
+
+.img-normalizada{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
