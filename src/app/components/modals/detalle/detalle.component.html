@@ -1,0 +1,52 @@
+<ion-modal [isOpen]="isModalOpen">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title [innerHTML]="'Detalle'"></ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="cerraModal()">Cerrar</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content [fullscreen]="true">
+      <div class="back">
+        <div class="background">
+          <div class="centering">
+            <div class="articles">
+              <article>
+                <figure>
+                  <img [src]="peliculaData.url" [alt]="peliculaData.nombre" />
+                </figure>
+                <div class="article-preview">
+                  <h2 [innerHTML]="'<b>' + peliculaData.nombre + '</b>'"></h2>
+                  <p style="  text-align: justify;">
+                    {{ peliculaData.descripcion }}
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+        <ion-fab-button>
+          <ion-icon name="chevron-up-circle"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="top">
+          <ion-fab-button color="primary">
+            <!-- <ion-icon name="pencil"></ion-icon> -->
+          </ion-fab-button>
+          <ion-fab-button color="primary">
+            <!-- <ion-icon name="trash"></ion-icon> -->
+          </ion-fab-button>
+          <ion-fab-button (click)="accion('editar')" color="primary">
+            <ion-icon name="pencil"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button (click)="accion('borrar')" color="danger">
+            <ion-icon name="trash"></ion-icon>
+          </ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+    </ion-content>
+  </ng-template>
+</ion-modal>
